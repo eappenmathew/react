@@ -7,8 +7,19 @@ import React, { Component } from 'react';
 class App extends Component{
     constructor(){
         super();
-        this.state = { displayBio: true };
+        this.state = { displayBio: false };
+
+        console.log('Component this', this);
+
+       this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
     }
+
+
+toggleDisplayBio() {
+    this.setState({ displayBio: !this.state.displayBio })
+}
+
+
     render(){
 
 
@@ -21,10 +32,15 @@ class App extends Component{
                 this.state.displayBio ? (
                 <div>
                     <p>I live in india</p>
-                    <p>qwerty</p>
+                    <p>just for fun</p>
                     <p>coding</p>
+                    <button onClick = {this.toggleDisplayBio}>Show less</button>
                 </div>
-                    ) : null
+                    ) : (
+                        <div>
+                            <button onClick={this.toggleDisplayBio}> Read more </button>
+                        </div>
+                    )
                 }
             </div>
         )
