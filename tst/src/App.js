@@ -2,22 +2,30 @@ import React, { Component } from 'react';
 
 
 
-class RegularClass{}
-class ComponentClass extends Component{}
-
-
-const regularClassInstance = new RegularClass();
-const componentClassInstance = new ComponentClass();
-
-console.log('regularClassInstance', regularClassInstance);
-console.log('componentClassInstance',componentClassInstance);
+//class RegularClass{}
 
 class App extends Component{
+    constructor(){
+        super();
+        this.state = { displayBio: true };
+    }
     render(){
+
+
+
         return(
             <div>
                 <h1>Hello</h1>
                 <p>My name is allen</p>
+                {
+                this.state.displayBio ? (
+                <div>
+                    <p>I live in india</p>
+                    <p>qwerty</p>
+                    <p>coding</p>
+                </div>
+                    ) : null
+                }
             </div>
         )
     }
