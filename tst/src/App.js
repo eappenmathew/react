@@ -18,7 +18,8 @@ class App extends Component{
 
 
 toggleDisplayBio = () => {
-    this.setState({ displayBio: !this.state.displayBio })
+    this.setState(
+        { displayBio: !this.state.displayBio })
     
 }
 
