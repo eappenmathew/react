@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Project from './Projects';
 
 
 //class RegularClass{}
@@ -18,8 +18,7 @@ class App extends Component{
 
 
 toggleDisplayBio = () => {
-    this.setState(
-        { displayBio: !this.state.displayBio })
+    this.setState({ displayBio: !this.state.displayBio })
     
 }
 
@@ -46,6 +45,8 @@ toggleDisplayBio = () => {
                         </div>
                     )
                 }
+                <hr />
+                <Project />
             </div>
         )
     }
